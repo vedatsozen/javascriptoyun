@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<p>Rakamlara tek tek tıklayıp 0 a ulaşmaya çalışın. 0 ın altına düşerseniz kaybedersiniz. 0 a ulaşırsanız kazanırsınız.</p>
+<div id="result"></div>
+
+<div id="numbers">
+
+    
+    <div class="number" id="number1"></div>
+    <div class="number" id="number2"></div>
+    <div class="number" id="number3"></div>
+    <div class="number" id="number4"></div>
+    <div class="number" id="number5"></div>
+
+
+</div>
+
+</body>
+
+<script>
+
+
+const random1 = Math.floor(Math.random() * 5 ) + 1 ;
+document.getElementById("number1").innerHTML = random1;
+
+const random2 = Math.floor(Math.random() * 5 ) + 1 ;
+document.getElementById("number2").innerHTML = random2;
+
+const random3 = Math.floor(Math.random() * 5 ) + 1 ;
+document.getElementById("number3").innerHTML = random3;
+
+const random4 = Math.floor(Math.random() * 5 ) + 1 ;
+document.getElementById("number4").innerHTML = random4;
+
+const random5 = Math.floor(Math.random() * 5 ) + 1 ;
+document.getElementById("number5").innerHTML = random5;
+
+
+let total = random1+random2+random3+random4+random5 ;
+let totalnew = total - 5 ;
+
+document.getElementById("result").innerHTML = totalnew ;
+
+document.getElementById("number1").addEventListener("click", function() {
+document.getElementById("number1").style.display = "none";
+totalnew = totalnew - random1;
+document.getElementById("result").innerHTML = totalnew ;
+if ( totalnew < 0 ) {
+    alert("Kaybettiniz. Lütfen tekrar deneyiniz.") ;
+    window.location.reload();
+}
+
+else if ( totalnew == 0 ) {
+    alert("Kazandınız. Tebrikler");
+    window.location.reload();
+}
+
+})
+
+document.getElementById("number2").addEventListener("click", function() {
+    document.getElementById("number2").style.display = "none";
+totalnew = totalnew - random2;
+document.getElementById("result").innerHTML = totalnew ;
+if ( totalnew < 0 ) {
+    alert("Kaybettiniz. Lütfen tekrar deneyiniz.") ;
+    window.location.reload();
+}
+
+else if ( totalnew == 0 ) {
+    alert("Kazandınız. Tebrikler");
+    window.location.reload();
+}
+
+})
+
+document.getElementById("number3").addEventListener("click", function() {
+    document.getElementById("number3").style.display = "none";
+totalnew = totalnew - random3;
+document.getElementById("result").innerHTML = totalnew ;
+if ( totalnew < 0 ) {
+    alert("Kaybettiniz. Lütfen tekrar deneyiniz.") ;
+    window.location.reload();
+}
+
+else if ( totalnew == 0 ) {
+    alert("Kazandınız. Tebrikler");
+    window.location.reload();
+}
+
+})
+
+document.getElementById("number4").addEventListener("click", function() {
+    document.getElementById("number4").style.display = "none";
+totalnew = totalnew - random4;
+document.getElementById("result").innerHTML = totalnew ;
+if ( totalnew < 0 ) {
+    alert("Kaybettiniz. Lütfen tekrar deneyiniz.") ;
+    window.location.reload();
+}
+
+else if ( totalnew == 0 ) {
+    alert("Kazandınız. Tebrikler");
+    window.location.reload();
+}
+
+})
+
+document.getElementById("number5").addEventListener("click", function() {
+    document.getElementById("number5").style.display = "none";
+totalnew = totalnew - random5;
+document.getElementById("result").innerHTML = totalnew ;
+if ( totalnew < 0 ) {
+    alert("Kaybettiniz. Lütfen tekrar deneyiniz.") ;
+    window.location.reload();
+}
+
+else if ( totalnew == 0 ) {
+    alert("Kazandınız. Tebrikler");
+    window.location.reload();
+}
+
+
+})
+
+
+
+
+</script>
+</html>
